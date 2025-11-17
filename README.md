@@ -12,8 +12,6 @@
 - [Licence](#-licence)
 - [Contact](#-contact)
 
-> Projet en cours de développement !!
-
 ## 📦 Introduction
 
 Le projet "PEM-X" est un :
@@ -45,26 +43,27 @@ Conçu pour **apprendre l'électronique**, étape par étape.
 - **Registres** : 16 registres de 8 bits
 - **Drapeaux** : Zéro, Carry, Négatif, Overflow
 - **Microcode** : 32 bits, avec 1 à 16 µ-instruction par instruction
-- **Périphériques** : jusqu'à 32
+- **Périphériques** : jusqu'à 32 périphériques d'entrée/sortie (I/O device)
   - Périphérique 0 => RAM obligatoire
   - Périphériques 1 à 31 => libres (timer, UART, LCD, …)
 - **Cartes** :
   - 1 carte support
-  - 1 carte par fonction interne, ou presque (une carte ALU, une carte RAM, etc)
+  - 1 carte par fonction interne, ou presque (une carte HORLOGE+RESET, une carte ALU, une carte RAM, etc)
 
-## 🛠️ Cartes modulaires (avancement projet)
+## 🛠️ Cartes modulaires (projet en cours de développement, ATTENTION !!)
 
-| Nom                             | Description                                                                                                                                                                         | État       |
-| ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
-| **Préparation projet**          | Schéma global, avec recherches préalables                                                                                                                                           | Fait ✅    |
-| **Carte support + CLK + RESET** | Alimentation +5V, distribution des bus d’adresse/données/commande partagés, horloge 4 MHz (CLK), et RESET                                                                           | À faire ⏳ |
-| **Carte PC + ROM + IR**         | Compteur de programme (CP), ROM programme (ROM), registres d’instruction (IR)                                                                                                       | À faire ⏳ |
-| **Carte UC**                    | Unité de commande (UC), avec Micro-ROM et logique de séquençage intégrés                                                                                                            | À faire ⏳ |
-| **Carte RF**                    | Register Files (RF), avec 16 registres de 8 bits intégrés                                                                                                                           | À faire ⏳ |
-| **Carte ALU**                   | Unité arithmétique et logique (ALU), avec sortie drapeaux Z, C, N, V (flags zero/carry/neg/ovf)                                                                                     | À faire ⏳ |
-| **Carte IODS + SP + BTW**       | I/O Device Selector (DS), Stack pointer (SP), et ByteToWord (BTW)                                                                                                                   | À faire ⏳ |
-| **Carte RAM**                   | 8 Ko de RAM (partagée par programme et pile) ; pour rappel, ce sera le périphérique #0, obligatoire pour un bon fonctionnement du processeur (avec utilisation de la pile et autre) | À faire ⏳ |
-| **Carte Périphérique #1**       | Une interface homme-machine, avec des interrupteurs (microswitchs) et/ou boutons-poussoirs, ainsi que des voyants et/ou afficheurs 7 segments                                       | À faire ⏳ |
+| Nom                         | Description                                                                                                                                                                         | État        |
+| --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| **Préparation projet**      | Schéma global, avec recherches préalables                                                                                                                                           | Fait ✅     |
+| **Carte support + alim 5V** | Alimentation +5V, distribution des bus d’adresse/données/commande partagés                                                                                                          | En cours ⚙️ |
+| **Carte CLK + RESET**       | Horloge 4 MHz (CLK), et RESET                                                                                                                                                       | À faire ⏳  |
+| **Carte PC + ROM + IR**     | Compteur de programme (CP), ROM programme (ROM), registres d’instruction (IR)                                                                                                       | À faire ⏳  |
+| **Carte UC**                | Unité de commande (UC), avec Micro-ROM et logique de séquençage intégrés                                                                                                            | À faire ⏳  |
+| **Carte RF**                | Register Files (RF), avec 16 registres de 8 bits intégrés                                                                                                                           | À faire ⏳  |
+| **Carte ALU**               | Unité arithmétique et logique (ALU), avec sortie drapeaux Z, C, N, V (flags zero/carry/neg/ovf)                                                                                     | À faire ⏳  |
+| **Carte IODS + SP + BTW**   | I/O Device Selector (DS), Stack pointer (SP), et ByteToWord (BTW)                                                                                                                   | À faire ⏳  |
+| **Carte RAM**               | 8 Ko de RAM (partagée par programme et pile) ; pour rappel, ce sera le périphérique #0, obligatoire pour un bon fonctionnement du processeur (avec utilisation de la pile et autre) | À faire ⏳  |
+| **Carte Périphérique #1**   | Une interface homme-machine, avec des interrupteurs (microswitchs) et/ou boutons-poussoirs, ainsi que des voyants et/ou afficheurs 7 segments                                       | À faire ⏳  |
 
 > Chaque carte aura son **article dédié** sur [Passion Électronique](https://passionelectronique.fr) avec schémas, photos, et tests réalisés dessus.
 
